@@ -28,3 +28,13 @@ Homestead.json
 .env.production
 .phpactor.json
 auth.json
+
+# Antigravity & Superpowers
+.superpowers/
+
+# Node & Build artifacts
+dist/
+**/.vitepress/dist/
+**/.vitepress/cache/
+**/.vitepress/.temp/
+coverage/

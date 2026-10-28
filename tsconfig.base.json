@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@servicio-linea-once/primax": ["packages/primax/src/index.ts"],
+      "@servicio-linea-once/primax/inertia": ["packages/primax/src/inertia/index.ts"],
+      "@servicio-linea-once/primax/tailwind": ["packages/primax/src/tailwind/index.ts"],
+      "@servicio-linea-once/primax/*": ["packages/primax/src/*"]
+    }
+  }
+}
