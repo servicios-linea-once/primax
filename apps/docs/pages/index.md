@@ -21,3 +21,4 @@ features:
   - title: 4 Built-in Themes
     details: Aura, Lara, Nora, and Obsidian with OLED dark mode support.
 ---
+

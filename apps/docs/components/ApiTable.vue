@@ -14,17 +14,17 @@
           :key="idx"
           class="hover:bg-zinc-50/50 dark:hover:bg-zinc-900/30 transition"
         >
-          <td v-if="row.name" class="px-4 py-3 font-mono font-semibold text-emerald-600 dark:text-emerald-400">
-            {{ row.name }}
+          <td class="px-4 py-3 font-mono font-semibold text-emerald-600 dark:text-emerald-400">
+            {{ row.name ?? row.event ?? row.key ?? '-' }}
           </td>
-          <td v-if="row.type" class="px-4 py-3 font-mono text-zinc-600 dark:text-zinc-400">
-            {{ row.type }}
+          <td class="px-4 py-3 font-mono text-zinc-600 dark:text-zinc-400">
+            {{ row.type ?? row.payload ?? row.tag ?? '-' }}
           </td>
-          <td v-if="row.default !== undefined" class="px-4 py-3 font-mono text-amber-600 dark:text-amber-400">
-            {{ row.default }}
+          <td v-if="resolvedHeaders.length === 4" class="px-4 py-3 font-mono text-amber-600 dark:text-amber-400">
+            {{ row.default !== undefined ? row.default : '-' }}
           </td>
-          <td v-if="row.description" class="px-4 py-3 text-zinc-700 dark:text-zinc-300">
-            {{ row.description }}
+          <td class="px-4 py-3 text-zinc-700 dark:text-zinc-300">
+            {{ row.description ?? '-' }}
           </td>
         </tr>
       </tbody>
@@ -42,7 +42,6 @@ const props = withDefaults(
     type?: 'props' | 'events' | 'slots' | 'pt';
   }>(),
   {
-    headers: () => ['Name', 'Type', 'Default', 'Description'],
     rows: () => [],
     type: 'props'
   }

@@ -18,3 +18,4 @@ export function createPrimax(options: PrimaxOptions = {}): Plugin {
 }
 
 export default createPrimax;
+

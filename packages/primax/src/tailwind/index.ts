@@ -19,3 +19,4 @@ export function primaxPreset(options: PrimaxTailwindOptions = {}) {
 }
 
 export default primaxPreset;
+

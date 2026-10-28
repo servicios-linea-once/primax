@@ -34,3 +34,4 @@ const apiRows = [
 ## API Reference
 
 <ApiTable :rows="apiRows" />
+

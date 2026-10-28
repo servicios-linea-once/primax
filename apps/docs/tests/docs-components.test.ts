@@ -44,4 +44,23 @@ describe('Documentation Viewer Core Components', () => {
     expect(wrapper.text()).toContain('variant');
     expect(wrapper.text()).toContain("'primary' | 'secondary'");
   });
+
+  it('ApiTable automatically switches headers based on type prop when headers is omitted', () => {
+    const rows = [
+      { name: 'change', type: 'string', description: 'Emitted on selection change' }
+    ];
+    const wrapper = mount(ApiTable, { props: { type: 'events', rows } });
+    const ths = wrapper.findAll('th');
+    expect(ths.map(th => th.text())).toEqual(['Event', 'Payload', 'Description']);
+  });
+
+  it('ApiTable always renders 4 cells without dropping td when default is undefined', () => {
+    const rows = [
+      { name: 'label', type: 'string', description: 'Button text without default' }
+    ];
+    const wrapper = mount(ApiTable, { props: { rows } });
+    const tds = wrapper.findAll('tbody tr td');
+    expect(tds.length).toBe(4);
+    expect(tds[2].text()).toBe('-');
+  });
 });

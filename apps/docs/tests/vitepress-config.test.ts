@@ -16,3 +16,4 @@ describe('VitePress Configuration & Path Aliases', () => {
     expect(config.title).toBe('Primax UI');
   });
 });
+

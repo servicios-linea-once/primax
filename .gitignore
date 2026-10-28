@@ -34,7 +34,7 @@ auth.json
 
 # Node & Build artifacts
 dist/
-.vitepress/dist/
-.vitepress/cache/
+**/.vitepress/dist/
+**/.vitepress/cache/
+**/.vitepress/.temp/
 coverage/
-.vitepress/.temp/

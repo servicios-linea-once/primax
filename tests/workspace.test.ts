@@ -14,4 +14,10 @@ describe('Monorepo Workspace Configuration', () => {
     const tsconfig = JSON.parse(readFileSync('tsconfig.base.json', 'utf-8'));
     expect(tsconfig.compilerOptions.strict).toBe(true);
   });
+
+  it('configures path aliases in tsconfig.base.json for IDE and typechecker resolution', () => {
+    const tsconfig = JSON.parse(readFileSync('tsconfig.base.json', 'utf-8'));
+    expect(tsconfig.compilerOptions.paths).toBeDefined();
+    expect(tsconfig.compilerOptions.paths['@servicio-linea-once/primax']).toContain('packages/primax/src/index.ts');
+  });
 });

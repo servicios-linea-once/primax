@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Modular Vue 3 UI Component Suite with Inertia.js bridge and Tailwind PassThrough system",
   "type": "module",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
