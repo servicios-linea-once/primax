@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev pages",
-    "build": "vitepress build pages",
-    "preview": "vitepress preview pages"
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
   "dependencies": {
     "@servicio-linea-once/primax": "workspace:*",
@@ -19,6 +19,6 @@
     "jsdom": "^26.0.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.4"
   }
 }
