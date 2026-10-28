@@ -1,0 +1,19 @@
+{
+  "name": "primax-monorepo",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "dev:docs": "pnpm --filter @servicio-linea-once/primax-docs dev",
+    "build:primax": "pnpm --filter @servicio-linea-once/primax build",
+    "build:docs": "pnpm --filter @servicio-linea-once/primax-docs build",
+    "build": "pnpm build:primax && pnpm build:docs",
+    "test": "vitest run",
+    "typecheck": "pnpm -r --parallel exec vue-tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0",
+    "vue-tsc": "^2.2.0"
+  }
+}
