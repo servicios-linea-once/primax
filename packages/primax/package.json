@@ -1,0 +1,41 @@
+{
+  "name": "@servicio-linea-once/primax",
+  "version": "0.1.0",
+  "description": "Modular Vue 3 UI Component Suite with Inertia.js bridge and Tailwind PassThrough system",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./inertia": {
+      "types": "./dist/inertia/index.d.ts",
+      "import": "./dist/inertia/index.mjs"
+    },
+    "./tailwind": {
+      "types": "./dist/tailwind/index.d.ts",
+      "import": "./dist/tailwind/index.mjs"
+    },
+    "./themes/*": "./dist/themes/*"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.6.13",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.3",
+    "vue": "^3.5.13"
+  }
+}
